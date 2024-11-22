@@ -1,136 +1,206 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate from React Router
+import "../styles/About.css";
+
+// Icons
+import Arrow from "../assets/Icons/top-arrow-right-up.svg";
+import ArrowRight from "../assets/Icons/arrow-right.svg";
+import MissionIcon from "../assets/Icons/MissionIcon.svg";
+import VisionIcon from "../assets/Icons/VisionIcon.svg";
+
+// components
+import Footer from "../components/Footer.jsx";
 
 function About() {
+    const navigate = useNavigate();
+
+    const handleServicesNav = () => {
+        navigate("/services");
+    };
     return (
         <div className="about">
-            <h1>About iVari Security Systems</h1>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptatum magnam in nam laudantium, odit aut molestias
-                explicabo esse cum officia mollitia unde expedita culpa dolores
-                assumenda dolore. Expedita consequuntur placeat perferendis nemo
-                qui id praesentium atque quas, nobis sint. Aliquid, praesentium,
-                amet perspiciatis impedit laborum illum qui ab maxime dicta
-                blanditiis incidunt tempora nihil? Dolores sit unde fugiat
-                consectetur, rem perferendis corrupti dolore accusantium officia
-                eaque recusandae facilis qui ab velit officiis. Vitae
-                consequuntur molestiae quas perferendis voluptas id in, nemo
-                delectus nam, sunt saepe hic quod deleniti sit eos. Perferendis,
-                nobis soluta labore consequuntur officiis quo cupiditate
-                eligendi. Quidem velit saepe aperiam dicta nobis culpa
-                laudantium iusto dolores cum illum! Eveniet quibusdam libero
-                iusto et velit laborum ab, quis, recusandae, sunt id fugit
-                labore numquam incidunt animi? Et repellendus neque commodi
-                autem excepturi odit natus ut! Incidunt amet rem ipsam vitae
-                similique autem, voluptas commodi omnis saepe harum eos illo,
-                veritatis accusantium perspiciatis dicta nulla quia fugiat ullam
-                voluptatibus aperiam sapiente! Consequatur dolores, at non
-                blanditiis magnam, totam beatae quae alias aliquid voluptatum
-                doloribus esse. Nulla consequatur ea impedit nam, sit
-                praesentium illum unde repellat a quod aliquid cupiditate,
-                consequuntur delectus rem laborum voluptates beatae culpa ab id
-                dicta corrupti sunt. Itaque nobis quis eos labore. Nostrum,
-                earum! Architecto laborum, dolore ducimus veritatis voluptas
-                maxime et deserunt quos sequi repudiandae ipsum eos pariatur
-                nihil reiciendis nam est consequatur qui. Perspiciatis non
-                quaerat illo minus commodi voluptatem, natus autem aliquid, iste
-                cumque repudiandae maxime consequuntur suscipit placeat dolores
-                nobis incidunt facilis velit illum recusandae harum eligendi
-                odio. Debitis, placeat veritatis voluptatibus sed eos iusto eius
-                cupiditate facilis et dignissimos distinctio totam porro
-                possimus omnis expedita dolor maiores numquam? Laborum saepe
-                impedit repellendus sequi maiores aperiam quidem voluptate a
-                dolor corrupti rem aliquam accusantium, ratione id ullam itaque
-                explicabo cupiditate aut aliquid laboriosam ipsa! Laborum
-                molestiae fugiat numquam minus architecto cum, molestias quas!
-                Aut amet sint eligendi nostrum illo doloremque officia excepturi
-                perspiciatis velit illum aliquid odio dolor eum hic eius
-                consequuntur voluptates accusantium rerum voluptatibus earum
-                ratione minus, mollitia, inventore vitae. Ratione, id vitae quis
-                eveniet perspiciatis fugit perferendis itaque dolores a
-                temporibus magnam laborum ipsum natus sed culpa esse, blanditiis
-                facere, beatae aspernatur cum sunt. Laborum doloremque ad porro
-                sapiente amet aut, velit laboriosam praesentium suscipit enim?
-                Aut asperiores non facilis cumque consectetur accusamus porro
-                cupiditate quas. Provident mollitia perspiciatis animi atque
-                laboriosam voluptatem, dicta reiciendis magni error deserunt
-                officia sapiente est omnis dignissimos. Quibusdam assumenda
-                reiciendis sunt nam magni veritatis, perspiciatis voluptatem non
-                culpa natus officia quod vitae molestiae incidunt debitis
-                numquam autem officiis, quia ut ad accusamus dolor voluptatum
-                veniam. Explicabo, excepturi. Animi fuga nisi tenetur fugit
-                consectetur omnis necessitatibus cum quos repellendus et quas,
-                vitae possimus quod, eius beatae iste, odio vero exercitationem
-                harum ex. Non consequatur reiciendis accusamus maiores quibusdam
-                id, sed sunt, dolorum veritatis ea voluptatibus sit consequuntur
-                magnam enim dolor deserunt adipisci. Aspernatur sit quisquam
-                possimus nesciunt, dignissimos rerum ipsam obcaecati animi quia
-                dolorem optio vero ratione enim facere, in quibusdam! Maiores
-                sed suscipit labore dolorum voluptas blanditiis debitis aperiam
-                esse non corporis magnam, aspernatur qui. Ut, quia rem maxime
-                placeat esse error non voluptas maiores? Architecto facilis
-                incidunt consequatur iusto rem eligendi error consectetur earum?
-                Ea, eos tempore. Doloremque quos officiis, possimus impedit,
-                quibusdam totam optio eos quasi, aliquam porro dicta quod quae
-                laudantium aspernatur! Quam molestiae architecto mollitia
-                voluptate unde qui aspernatur deserunt accusamus doloribus
-                repudiandae tempore, suscipit sint nam fuga, enim officia
-                nesciunt! Aperiam ducimus itaque sunt, numquam officiis debitis
-                autem quaerat est consequuntur odit aliquid suscipit totam,
-                omnis praesentium eum dignissimos nam vero maxime corrupti,
-                porro consectetur odio. Quis alias voluptate, et dolores at quod
-                qui ipsa nam ex numquam recusandae libero ea minus,
-                necessitatibus blanditiis quos veritatis tempora sapiente
-                deleniti totam in. Ducimus facilis excepturi, minus soluta
-                expedita consectetur quas iusto cum, at, facere quidem minima?
-                Repellat itaque hic ullam quis laudantium cum odio facilis atque
-                quas deserunt nobis, inventore doloribus natus ea, aspernatur
-                labore soluta cumque repellendus? Rem quis sed deleniti iste
-                repudiandae. Eveniet ab non impedit accusamus est quasi maxime
-                possimus porro sequi, fugiat eius blanditiis. Vitae dolore sed
-                cupiditate excepturi reprehenderit autem veniam eos placeat,
-                debitis accusantium harum molestiae. Harum veritatis voluptas
-                officiis voluptatem beatae itaque doloremque totam cum rerum
-                nesciunt expedita nostrum earum neque quasi adipisci ab eum
-                molestias inventore aut id deleniti unde iste, aliquid sit. Eius
-                architecto, numquam iusto exercitationem consequuntur officiis
-                tempora temporibus repellendus obcaecati et labore. Accusamus
-                perferendis dolorum iste veritatis repellat aliquam dicta
-                ducimus nisi soluta tempore eius dolores quasi minus
-                exercitationem obcaecati rerum iusto, quisquam voluptatibus
-                explicabo magnam saepe optio. Distinctio neque recusandae
-                mollitia officia assumenda facere eligendi, itaque, dolorem quae
-                incidunt dolorum dolor voluptates placeat ex fuga, aut cum
-                molestiae excepturi nobis dolore reprehenderit. Magnam non
-                architecto explicabo, neque autem minima temporibus officiis
-                fuga, nostrum facere, distinctio dolore. Molestiae nostrum
-                tempore quam quos laborum sed quis veritatis assumenda nulla
-                inventore voluptates maxime soluta, saepe doloremque eveniet
-                reprehenderit ex esse dolorum corporis hic id quibusdam incidunt
-                aspernatur? Architecto odit ullam commodi numquam? Nostrum
-                maxime atque et libero quo ex amet, recusandae nemo, laudantium
-                quasi distinctio nihil, beatae officia ratione dolores
-                repudiandae at eligendi reprehenderit magnam odit tempora.
-                Blanditiis nihil ipsum repellat necessitatibus dolorem cumque
-                eum eveniet. Repellendus dolorem nemo fugit quos possimus vitae
-                et harum expedita doloribus, omnis rem ex excepturi illo. Sequi
-                labore nulla ipsum nemo ad, mollitia possimus ipsa repellat
-                dignissimos molestiae voluptate repellendus asperiores facilis
-                laudantium provident non itaque earum delectus perferendis.
-                Reprehenderit alias laborum debitis doloremque, excepturi
-                explicabo et eaque maiores veniam dignissimos aliquam
-                consectetur esse, quis officia? Et dolorum perspiciatis corporis
-                recusandae, porro rerum facere illum dolor qui praesentium.
-                Iusto provident, voluptas temporibus voluptatem, tempore
-                molestias, dolorum aliquid iste inventore sequi beatae
-                perspiciatis? Consectetur accusamus aliquid odit nulla deserunt,
-                illum sed quo tempora nisi optio assumenda dignissimos eos
-                cupiditate totam ab tempore molestias dolores iure voluptatum
-                sequi in ullam velit. Dolor sed, atque necessitatibus laborum
-                eligendi repellat modi error! Eligendi assumenda voluptate
-                pariatur odit sapiente atque eaque consequatur harum! Dolore
-                officiis asperiores nostrum!
-            </p>
+            <section className="about-hero-section">
+                <div className="hero-heading">
+                    <h1>ABOUT</h1>
+                    <span>OUR MISSION, YOUR SAFETY</span>
+                </div>
+                <p>
+                    Dedicated to making safety accessible through cutting-edge
+                    solutions that protect what matters most.
+                </p>
+            </section>
+
+            <section className="why-ivari">
+                <div className="why-row1">
+                    <h1>WHY IVARI?</h1>
+                </div>
+                <div className="why-row2">
+                    <div className="why-r2-row1">
+                        <div className="why-ivari-card">
+                            <h3>TRUST</h3>
+                            <p>
+                                We build trust through open communication and
+                                unwavering integrity, creating a reliable and
+                                transparent experience.
+                            </p>
+                        </div>
+                        <div className="why-ivari-card">
+                            <h3>RESPONSIVENESS</h3>
+                            <p>
+                                We proactively address challenges, understanding
+                                and adapting to our clients' evolving needs with
+                                agility.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="why-r2-row2">
+                        <div className="why-ivari-card">
+                            <h3>UNIQUENESS</h3>
+                            <p>
+                                Our approach combines innovative solutions with
+                                personalized client relationships, positioning
+                                us as industry pioneers.
+                            </p>
+                        </div>
+                        <div className="why-ivari-card">
+                            <h3>SAFE & DEFENDABLE</h3>
+                            <p>
+                                Safety isn’t just a checkbox—it’s embedded in
+                                every decision, process, and interaction.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="why-r2-row3">
+                        <div className="why-ivari-card">
+                            <h3>TIMELESS DEDICATION</h3>
+                            <p>
+                                We consistently deliver on promises, exceeding
+                                deadlines to ensure our clients can count on us
+                                confidently.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="apart-section">
+                <div className="apart-col1">
+                    <div className="apart-heading">
+                        <h1>WHAT SETS</h1>
+                        <h1>US APART</h1>
+                    </div>
+                    <div className="apart-points">
+                        <div className="apart-points-col1">
+                            <div className="apart-point-card">
+                                <h3>RELIABILITY</h3>
+                                <p>Dependable systems ensure peace of mind.</p>
+                            </div>
+                            <div className="apart-point-card">
+                                <h3>CUSTOMIZATION</h3>
+                                <p>
+                                    Every solution is tailored to meet unique
+                                    client needs..
+                                </p>
+                            </div>
+                            <div className="apart-point-card">
+                                <h3>ADVANCED TECHNOLOGY</h3>
+                                <p>
+                                    Access to the latest tools keeps us at the
+                                    forefront.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="apart-points-col2">
+                            <div className="apart-point-card">
+                                <h3>INTEGRATED SOLUTIONS</h3>
+                                <p>
+                                    We blend safety and security seamlessly for
+                                    maximum efficiency..
+                                </p>
+                            </div>
+                            <div className="apart-point-card">
+                                <h3>SUSTAINABILITY</h3>
+                                <p>
+                                    Environmentally responsible practices are at
+                                    our core.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="apart-col2">
+                    <div className="about-graphic-element9 about-graphic-element">
+                        <div className="about-graphic-element8 about-graphic-element">
+                            <div className="about-graphic-element7 about-graphic-element">
+                                <div className="about-graphic-element6 about-graphic-element">
+                                    <div className="about-graphic-element5 about-graphic-element">
+                                        <div className="about-graphic-element4 about-graphic-element">
+                                            <div className="about-graphic-element3 about-graphic-element">
+                                                <div className="about-graphic-element2 about-graphic-element">
+                                                    <div className="about-graphic-element1 about-graphic-element">
+                                                        <button
+                                                            className="about-services-cta"
+                                                            onClick={
+                                                                handleServicesNav
+                                                            }
+                                                        >
+                                                            Explore services
+                                                            <img
+                                                                src={ArrowRight}
+                                                                alt="->"
+                                                            />
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section className="mis-vis-section">
+                <div className="mission">
+                    <div className="m-s-card-row1">
+                        <div className="m-s-card-icon">
+                            <img src={MissionIcon} alt="Mission" />
+                        </div>
+                        <h1>MISSION</h1>
+                    </div>
+                    <div className="m-s-card-row2">
+                        <p>
+                            We empower individuals, businesses, and communities
+                            by delivering integrated safety systems that protect
+                            lives and property while enhancing building
+                            functionality and sustainability. Through innovative
+                            solutions, we are committed to creating secure and
+                            resilient environments that contribute to a safer,
+                            greener future.
+                        </p>
+                    </div>
+                </div>
+                <div className="vision">
+                    <div className="m-s-card-row1">
+                        <div className="m-s-card-icon">
+                            <img src={VisionIcon} alt="Vision" />
+                        </div>
+                        <h1>VISION</h1>
+                    </div>
+                    <div className="m-s-card-row2">
+                        <p>
+                            Securing Tomorrow, Today: Our vision is to lead in
+                            safety and security by safeguarding lives, assets,
+                            and peace of mind. With innovation at our core, we
+                            aim to set new protection standards, delivering
+                            solutions that adapt to our clients' evolving needs
+                            and contribute to a safer world.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <Footer />
         </div>
     );
 }

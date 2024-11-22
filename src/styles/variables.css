@@ -8,6 +8,16 @@
     --color-blood-red: #cc0118;
 }
 
+* {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: var(--color-flash-white);
+}
+
 @font-face {
     font-family: "AstoriaLight";
     src: url("../assets/Fonts/Astoria/AstoriaLight.ttf") format("opentype");
