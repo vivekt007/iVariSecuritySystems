@@ -15,6 +15,7 @@ import Biometrics from "./OurServices/Biometrics.jsx";
 import Signage from "./OurServices/Signage.jsx";
 import SafetyTraning from "./OurServices/SafetyTraning.jsx";
 import RiskAssessment from "./OurServices/RiskAssessment.jsx";
+import OtherProducts from "./OurServices/OtherProduct.jsx";
 
 function App() {
     const [isLoading, setIsLoading] = useState(true);
@@ -53,6 +54,7 @@ function App() {
                 <Route path="/signage" element={<Signage />} />
                 <Route path="/safetyTraning" element={<SafetyTraning />} />
                 <Route path="/riskAssessment" element={<RiskAssessment />} />
+                <Route path="/otherProducts" element={<OtherProducts />} />
             </Routes>
         </Router>
     );

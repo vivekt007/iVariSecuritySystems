@@ -18,6 +18,7 @@ import BiometricsIcon from "../assets/Icons/Biometrics.svg";
 import FireSafetyAuditIcon from "../assets/Icons/FireSafetyAudit.svg";
 import RiskAssesmentIcon from "../assets/Icons/FireRiskAssessment.svg";
 import SafetyTraningsIcon from "../assets/Icons/FireSafetyTraining.svg";
+import OtherProductsIcon from "../assets/Icons/OtherProducts.svg";
 
 // background
 import Logo3D from "../assets/BackgroundImg/iVariLogo3d.png";
@@ -29,17 +30,17 @@ import Footer from "../components/Footer.jsx";
 function Home() {
     const navigate = useNavigate();
 
+    const handleCareerNav = () => {
+        window.location.href =
+            "https://www.linkedin.com/company/ivari-security-systems-pvt-ltd/";
+    };
+
     const handleServicesNav = () => {
         navigate("/services");
     };
 
     const handleAboutNav = () => {
         navigate("/about");
-    };
-
-    const handleCareerNav = () => {
-        window.location.href =
-            "https://www.linkedin.com/company/ivari-security-systems-pvt-ltd/";
     };
 
     const handleFireSafety = () => {
@@ -81,6 +82,10 @@ function Home() {
 
     const handleRiskAssessment = () => {
         navigate("/riskAssessment");
+    };
+
+    const handleOtherProducts = () => {
+        navigate("/otherProducts");
     };
 
     // contact handler
@@ -235,27 +240,28 @@ function Home() {
 
                     <div
                         className="services-cta fire-safety-audit"
-                        onClick={handleRiskAssessment}
+                        onClick={handleGasSuppression}
                     >
                         <div className="ser-cta-row1">
                             <div className="ser-cta-icon">
                                 <img
                                     src={FireSafetyAuditIcon}
-                                    alt="Fire safety audit"
+                                    alt="Suppression system"
                                 />
                             </div>
-                            <h3>FIRE SAFETY AUDIT</h3>
+                            <h3>SUPPRESSION SYSTEM</h3>
                         </div>
                         <div className="ser-cta-row2">
                             <p>
-                                Ensure your compliance and readiness with
-                                detailed fire safety audits, assessing systems
-                                and protocols for optimal protection.
+                                Ensure safety with advanced suppression systems
+                                designed for electrical panels, etc. Protect
+                                critical areas with efficient fire suppression
+                                and risk mitigation solutions.
                             </p>
                         </div>
                         <button
                             className="ser-cta-row3 ser-cta-btn"
-                            onClick={handleRiskAssessment}
+                            onClick={handleGasSuppression}
                         >
                             Check Out <img src={ArrowRight} alt="->" />
                         </button>
@@ -312,6 +318,35 @@ function Home() {
                         <button
                             className="ser-cta-row3 ser-cta-btn"
                             onClick={handleSafetyTraning}
+                        >
+                            Check Out <img src={ArrowRight} alt="->" />
+                        </button>
+                    </div>
+
+                    <div
+                        className="services-cta other-products"
+                        onClick={handleOtherProducts}
+                    >
+                        <div className="ser-cta-row1">
+                            <div className="ser-cta-icon">
+                                <img
+                                    src={OtherProductsIcon}
+                                    alt="Other products"
+                                />
+                            </div>
+                            <h3>OTHER PRODUCTS</h3>
+                        </div>
+                        <div className="ser-cta-row2">
+                            <p>
+                                Explore a range of safety solutions including
+                                road safety products, rubber speed breakers, PVC
+                                cones, mirrors, and more, designed for
+                                protection and durability.
+                            </p>
+                        </div>
+                        <button
+                            className="ser-cta-row3 ser-cta-btn"
+                            onClick={handleOtherProducts}
                         >
                             Check Out <img src={ArrowRight} alt="->" />
                         </button>

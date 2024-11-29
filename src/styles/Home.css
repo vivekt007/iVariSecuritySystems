@@ -105,7 +105,6 @@ body {
 .services-cta {
     background-color: var(--color-dark-void);
     aspect-ratio: 3/2;
-    border: none;
     border-radius: 16px;
     padding: 16px;
     display: flex;
@@ -115,6 +114,7 @@ body {
     gap: 12px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
 .ser-cta-row1 {
@@ -208,6 +208,13 @@ body {
 
 .fire-safety-tranings {
     background-image: url(../assets/BackgroundImg/FireSafetyTrainingBg.png);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.other-products {
+    background-image: url(../assets/BackgroundImg/OtherProductsBg.png);
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
