@@ -1,6 +1,7 @@
-import React from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate from React Router
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/Home.css";
+import axios from "axios";
 
 // logos
 import Zudio from "../assets/Logo/Zudio.png";
@@ -45,6 +46,27 @@ function Home() {
         navigate("/services");
     };
 
+    // contact handler
+
+    const [contactName, setContactName] = useState("");
+    const [emailId, setEmailId] = useState("");
+    const [contactMessage, setContactMessage] = useState("");
+    const [status, setStatus] = useState("");
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const formData = { contactName, emailId, contactMessage };
+        try {
+            const response = await axios.post(
+                "http://localhost:5000/send-message", // your backend endpoint
+                formData
+            );
+            setStatus("Message sent successfully!");
+        } catch (error) {
+            setStatus("Error sending message. Please try again later.");
+        }
+    };
+
     return (
         <div className="home">
             <section className="hero-section">
@@ -71,7 +93,7 @@ function Home() {
                     <h1>Services</h1>
                 </div>
                 <div className="services-row2">
-                    <button
+                    <div
                         className="services-cta fire-safety"
                         onClick={handleFireSafety}
                     >
@@ -94,9 +116,9 @@ function Home() {
                         >
                             Check Out <img src={ArrowRight} alt="->" />
                         </button>
-                    </button>
+                    </div>
 
-                    <button
+                    <div
                         className="services-cta survelliance"
                         onClick={handleFireSafety}
                     >
@@ -122,9 +144,9 @@ function Home() {
                         >
                             Check Out <img src={ArrowRight} alt="->" />
                         </button>
-                    </button>
+                    </div>
 
-                    <button
+                    <div
                         className="services-cta signage"
                         onClick={handleFireSafety}
                     >
@@ -147,9 +169,9 @@ function Home() {
                         >
                             Check Out <img src={ArrowRight} alt="->" />
                         </button>
-                    </button>
+                    </div>
 
-                    <button
+                    <div
                         className="services-cta biometrics"
                         onClick={handleFireSafety}
                     >
@@ -172,9 +194,9 @@ function Home() {
                         >
                             Check Out <img src={ArrowRight} alt="->" />
                         </button>
-                    </button>
+                    </div>
 
-                    <button
+                    <div
                         className="services-cta fire-safety-audit"
                         onClick={handleFireSafety}
                     >
@@ -200,9 +222,9 @@ function Home() {
                         >
                             Check Out <img src={ArrowRight} alt="->" />
                         </button>
-                    </button>
+                    </div>
 
-                    <button
+                    <div
                         className="services-cta risk-assessment"
                         onClick={handleFireSafety}
                     >
@@ -228,9 +250,9 @@ function Home() {
                         >
                             Check Out <img src={ArrowRight} alt="->" />
                         </button>
-                    </button>
+                    </div>
 
-                    <button
+                    <div
                         className="services-cta fire-safety-tranings"
                         onClick={handleFireSafety}
                     >
@@ -256,7 +278,7 @@ function Home() {
                         >
                             Check Out <img src={ArrowRight} alt="->" />
                         </button>
-                    </button>
+                    </div>
                 </div>
             </section>
             <section className="about-section">
@@ -424,23 +446,23 @@ function Home() {
                         <input
                             type="text"
                             placeholder="NAME"
-                            name="contactName"
-                            id="contactId"
+                            value={contactName}
+                            onChange={(e) => setContactName(e.target.value)}
                             required
                         />
                         <input
                             type="email"
-                            name="emailId"
-                            id="emailId"
                             placeholder="EMAIL"
+                            value={emailId}
+                            onChange={(e) => setEmailId(e.target.value)}
                             required
                         />
                     </div>
                     <div className="contact-form-row2">
                         <textarea
-                            name="contactMessage"
-                            id="contactMessage"
                             placeholder="MESSAGE"
+                            value={contactMessage}
+                            onChange={(e) => setContactMessage(e.target.value)}
                             required
                         ></textarea>
                     </div>
@@ -466,6 +488,9 @@ function Home() {
                                                                     alt="->"
                                                                 />
                                                             </button>
+                                                            {status && (
+                                                                <p>{status}</p>
+                                                            )}
                                                         </div>
                                                     </div>
                                                 </div>

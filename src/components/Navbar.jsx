@@ -48,7 +48,9 @@ function Navbar() {
                                     <p>Home</p>
                                     <span>&#40;01&#41;</span>
                                 </div>
-                                <img src={ArrowRight} alt="" />
+                                <div className="nav-icon">
+                                    <img src={ArrowRight} alt="" />
+                                </div>
                             </div>
                         </NavLink>
                     </li>
@@ -59,7 +61,9 @@ function Navbar() {
                                     <p>Services</p>
                                     <span>&#40;02&#41;</span>
                                 </div>
-                                <img src={ArrowRight} alt="" />
+                                <div className="nav-icon">
+                                    <img src={ArrowRight} alt="" />
+                                </div>
                             </div>
                         </NavLink>
                     </li>
@@ -70,7 +74,9 @@ function Navbar() {
                                     <p>About</p>
                                     <span>&#40;03&#41;</span>
                                 </div>
-                                <img src={ArrowRight} alt="" />
+                                <div className="nav-icon">
+                                    <img src={ArrowRight} alt="" />
+                                </div>
                             </div>
                         </NavLink>
                     </li>
@@ -81,7 +87,9 @@ function Navbar() {
                                     <p>Group Companies</p>
                                     <span>&#40;04&#41;</span>
                                 </div>
-                                <img src={ArrowRight} alt="" />
+                                <div className="nav-icon">
+                                    <img src={ArrowRight} alt="" />
+                                </div>
                             </div>
                         </NavLink>
                     </li>

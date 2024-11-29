@@ -13,7 +13,8 @@
 .about-hero-section {
     background-image: url(../assets/BackgroundImg/AboutHeroBg.png);
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    max-height: fit-content;
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
@@ -145,7 +146,7 @@
     border: 1px solid var(--color-flash-white);
     padding: 16px;
     height: fit-content;
-    width: 230px;
+    min-width: 230px;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -229,7 +230,7 @@
     animation-delay: 2.7s;
     right: -50%;
     position: absolute;
-    z-index: 99;
+    z-index: 0;
 }
 
 .about-services-cta {
@@ -276,7 +277,8 @@
     width: 100%;
     min-height: 100dvh;
     max-height: fit-content;
-    background-image: url(../assets/BackgroundImg/AboutMissionVissionBg.png);
+    /* background-image: url(../assets/BackgroundImg/AboutMissionVissionBg.png); */
+    background: radial-gradient(#053041 1%, #000000 70%);
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
@@ -285,6 +287,7 @@
     justify-content: center;
     gap: 4rem;
     padding: 40px 60px;
+    box-shadow: inset 0px 80px 160px #000000;
 }
 
 .mission,
@@ -299,6 +302,7 @@
     align-items: flex-start;
     justify-content: center;
     gap: 24px;
+    overflow: hidden;
 }
 
 .m-s-card-row1 {
@@ -328,4 +332,110 @@
     line-height: 110%;
     font-family: "SulphurLight";
     opacity: 0.7;
+}
+
+@media (max-width: 1280px) {
+    .about-graphic-element9 {
+        right: -76%;
+    }
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 768px) {
+    .about-graphic-element {
+        animation: none;
+    }
+    .about-hero-section {
+        padding: 40px 24px;
+    }
+
+    .hero-heading h1 {
+        font-size: 90px;
+    }
+
+    .hero-heading span {
+        font-size: 16px;
+        top: 25%;
+        left: 23%;
+        letter-spacing: -4%;
+        line-height: 60%;
+    }
+
+    .why-ivari {
+        padding: 40px 24px;
+    }
+
+    .why-ivari h1 {
+        font-size: 60px;
+    }
+
+    .why-r2-row1,
+    .why-r2-row2,
+    .why-r2-row3 {
+        gap: 8px;
+        align-items: flex-start;
+    }
+
+    .why-r2-row3 {
+        justify-content: flex-start;
+    }
+
+    .why-ivari-card {
+        width: 50%;
+        min-height: 140px;
+        max-height: 250px;
+    }
+
+    .why-ivari-card h3 {
+        font-size: 16px;
+    }
+
+    .why-ivari-card p {
+        font-size: 12px;
+    }
+
+    .apart-section {
+        flex-direction: column;
+        padding: 0px 24px;
+    }
+
+    .apart-points {
+        flex-direction: column;
+    }
+
+    .apart-col1,
+    .apart-col2 {
+        width: 100%;
+    }
+
+    .apart-points-col1,
+    .apart-points-col2 {
+        width: 100%;
+    }
+
+    .apart-point-card {
+        width: fit-content;
+    }
+
+    .about-graphic-element9 {
+        right: 0%;
+        position: relative;
+    }
+
+    .mis-vis-section {
+        flex-direction: column;
+        padding: 40px 24px;
+        gap: 1rem;
+    }
+
+    .mission,
+    .vision {
+        padding: 16px;
+    }
+
+    .m-s-card-row1 h1 {
+        font-size: 40px;
+    }
 }
