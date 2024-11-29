@@ -46,6 +46,43 @@ function Home() {
         navigate("/services");
     };
 
+    // services handler
+    const handleFireExtiunguisher = () => {
+        navigate("/fireExtinguisher");
+    };
+
+    const handleFireHydrant = () => {
+        navigate("/fireHydrant");
+    };
+
+    const handleCctv = () => {
+        navigate("/Cctv");
+    };
+
+    const handleFireAlarm = () => {
+        navigate("/fireAlarm");
+    };
+
+    const handleBiometrics = () => {
+        navigate("/biometrics");
+    };
+
+    const handleGasSuppression = () => {
+        navigate("/gasSuppression");
+    };
+
+    const handleSignage = () => {
+        navigate("/signage");
+    };
+
+    const handleSafetyTraning = () => {
+        navigate("/safetyTraning");
+    };
+
+    const handleRiskAssessment = () => {
+        navigate("/riskAssessment");
+    };
+
     // contact handler
 
     const [contactName, setContactName] = useState("");
@@ -95,7 +132,7 @@ function Home() {
                 <div className="services-row2">
                     <div
                         className="services-cta fire-safety"
-                        onClick={handleFireSafety}
+                        onClick={handleFireExtiunguisher}
                     >
                         <div className="ser-cta-row1">
                             <div className="ser-cta-icon">
@@ -112,7 +149,7 @@ function Home() {
                         </div>
                         <button
                             className="ser-cta-row3 ser-cta-btn"
-                            onClick={handleFireSafety}
+                            onClick={handleFireExtiunguisher}
                         >
                             Check Out <img src={ArrowRight} alt="->" />
                         </button>
@@ -120,7 +157,7 @@ function Home() {
 
                     <div
                         className="services-cta survelliance"
-                        onClick={handleFireSafety}
+                        onClick={handleCctv}
                     >
                         <div className="ser-cta-row1">
                             <div className="ser-cta-icon">
@@ -140,7 +177,7 @@ function Home() {
                         </div>
                         <button
                             className="ser-cta-row3 ser-cta-btn"
-                            onClick={handleFireSafety}
+                            onClick={handleCctv}
                         >
                             Check Out <img src={ArrowRight} alt="->" />
                         </button>
@@ -148,7 +185,7 @@ function Home() {
 
                     <div
                         className="services-cta signage"
-                        onClick={handleFireSafety}
+                        onClick={handleSignage}
                     >
                         <div className="ser-cta-row1">
                             <div className="ser-cta-icon">
@@ -165,7 +202,7 @@ function Home() {
                         </div>
                         <button
                             className="ser-cta-row3 ser-cta-btn"
-                            onClick={handleFireSafety}
+                            onClick={handleSignage}
                         >
                             Check Out <img src={ArrowRight} alt="->" />
                         </button>
@@ -173,7 +210,7 @@ function Home() {
 
                     <div
                         className="services-cta biometrics"
-                        onClick={handleFireSafety}
+                        onClick={handleBiometrics}
                     >
                         <div className="ser-cta-row1">
                             <div className="ser-cta-icon">
@@ -190,7 +227,7 @@ function Home() {
                         </div>
                         <button
                             className="ser-cta-row3 ser-cta-btn"
-                            onClick={handleFireSafety}
+                            onClick={handleBiometrics}
                         >
                             Check Out <img src={ArrowRight} alt="->" />
                         </button>
@@ -198,7 +235,7 @@ function Home() {
 
                     <div
                         className="services-cta fire-safety-audit"
-                        onClick={handleFireSafety}
+                        onClick={handleRiskAssessment}
                     >
                         <div className="ser-cta-row1">
                             <div className="ser-cta-icon">
@@ -218,7 +255,7 @@ function Home() {
                         </div>
                         <button
                             className="ser-cta-row3 ser-cta-btn"
-                            onClick={handleFireSafety}
+                            onClick={handleRiskAssessment}
                         >
                             Check Out <img src={ArrowRight} alt="->" />
                         </button>
@@ -226,7 +263,7 @@ function Home() {
 
                     <div
                         className="services-cta risk-assessment"
-                        onClick={handleFireSafety}
+                        onClick={handleRiskAssessment}
                     >
                         <div className="ser-cta-row1">
                             <div className="ser-cta-icon">
@@ -246,7 +283,7 @@ function Home() {
                         </div>
                         <button
                             className="ser-cta-row3 ser-cta-btn"
-                            onClick={handleFireSafety}
+                            onClick={handleRiskAssessment}
                         >
                             Check Out <img src={ArrowRight} alt="->" />
                         </button>
@@ -254,7 +291,7 @@ function Home() {
 
                     <div
                         className="services-cta fire-safety-tranings"
-                        onClick={handleFireSafety}
+                        onClick={handleSafetyTraning}
                     >
                         <div className="ser-cta-row1">
                             <div className="ser-cta-icon">
@@ -274,7 +311,7 @@ function Home() {
                         </div>
                         <button
                             className="ser-cta-row3 ser-cta-btn"
-                            onClick={handleFireSafety}
+                            onClick={handleSafetyTraning}
                         >
                             Check Out <img src={ArrowRight} alt="->" />
                         </button>

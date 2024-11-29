@@ -10,20 +10,8 @@ import Footer from "../components/Footer.jsx";
 function Services() {
     const navigate = useNavigate();
 
-    // useEffect(() => {
-    //     window.scrollTo({
-    //         top: 0,
-    //         behavior: "smooth",
-    //     });
-    // }, []);
-
-    const scrollTop = () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    };
-
     const handleFireExtiunguisher = () => {
         navigate("/fireExtinguisher");
-        scrollTop();
     };
 
     const handleFireHydrant = () => {
@@ -56,7 +44,6 @@ function Services() {
 
     const handleRiskAssessment = () => {
         navigate("/riskAssessment");
-        scrollTop();
     };
 
     return (
