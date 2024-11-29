@@ -13,8 +13,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const transporter = nodemailer.createTransport({
     service: "gmail", // or any email service you want
     auth: {
-        user: "vivektigadi57@gmail.com", // Replace with your email
-        pass: "Suchitr@67", // Replace with your email password
+        user: "iamsafe@ivari.in", // Replace with your email
+        pass: "pass", // Replace with your email password
     },
 });
 
@@ -24,7 +24,7 @@ app.post("/send-message", (req, res) => {
 
     const mailOptions = {
         from: emailId,
-        to: "vivektigadi57@gmail.com", // Replace with your email
+        to: "iamsafe@ivari.in", // Replace with your email
         subject: `New Contact Form Submission from ${contactName}`,
         text: `Message from: ${contactName}\n\nEmail: ${emailId}\n\nMessage:\n${contactMessage}`,
     };

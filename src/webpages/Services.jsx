@@ -87,7 +87,7 @@ function Services() {
                         className="service-card services-cctv"
                         onClick={handleCctv}
                     >
-                        <p>CCTV CAMERA</p>
+                        <p>SURVEILLANCE</p>
                     </button>
                     <button
                         className="service-card services-fire-alarm"

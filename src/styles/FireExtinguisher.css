@@ -411,17 +411,17 @@
 
     .extinguisher-r1-c2-row1 {
         width: 100%;
-        display: non;
+        height: fit-content;
     }
     .extinguisher-r1-c2-row2 {
         width: 100%;
-        height: 10dvh;
-        padding: 0;
+        height: fit-content;
+        padding: 8px 0;
     }
 
     .extinguisher-r1-c2-row1 img {
-        width: 100%;
-        height: 100%;
+        width: 250px;
+        /* height: 100%; */
     }
 
     .extinguisher-r1-c2-row2 h3 {
