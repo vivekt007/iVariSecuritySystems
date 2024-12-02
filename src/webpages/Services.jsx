@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/Services.css";
 
@@ -7,7 +7,13 @@ import ArrowRight from "../assets/Icons/arrow-right.svg";
 // components
 import Footer from "../components/Footer.jsx";
 
+import { observeElements } from "../animations.js";
+
 function Services() {
+    useEffect(() => {
+        observeElements();
+    }, []);
+
     const navigate = useNavigate();
 
     const handleFireExtiunguisher = () => {
@@ -46,8 +52,15 @@ function Services() {
         navigate("/riskAssessment");
     };
 
+    const handleFreeConsultation = () => {
+        window.open(
+            "https://wa.me/919606850350?text=Hello%20I%20want%20free%20consultation",
+            "_blank"
+        );
+    };
+
     return (
-        <div className="services">
+        <div className="services blur">
             <section className="our-services">
                 <div className="our-services-row1">
                     {/* <h1>Tailored Protection, Trusted Results</h1> */}
@@ -136,6 +149,9 @@ function Services() {
                                                         <button
                                                             type="submit"
                                                             className="service-cta"
+                                                            onClick={
+                                                                handleFreeConsultation
+                                                            }
                                                         >
                                                             Free Consultation
                                                             <img

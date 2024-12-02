@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/Home.css";
-import axios from "axios";
+import Swal from "sweetalert2";
+
+// js files
+import { observeElements } from "../animations.js";
 
 // logos
 import Zudio from "../assets/Logo/Zudio.png";
@@ -28,7 +31,13 @@ import CareersImg from "../assets/BackgroundImg/CareersImage.png";
 import Footer from "../components/Footer.jsx";
 
 function Home() {
+    useEffect(() => {
+        observeElements();
+    }, []);
+
     const navigate = useNavigate();
+
+    // handlers
 
     const handleCareerNav = () => {
         window.location.href =
@@ -43,25 +52,13 @@ function Home() {
         navigate("/about");
     };
 
-    const handleFireSafety = () => {
-        navigate("/services");
-    };
-
     // services handler
     const handleFireExtiunguisher = () => {
         navigate("/fireExtinguisher");
     };
 
-    const handleFireHydrant = () => {
-        navigate("/fireHydrant");
-    };
-
     const handleCctv = () => {
         navigate("/Cctv");
-    };
-
-    const handleFireAlarm = () => {
-        navigate("/fireAlarm");
     };
 
     const handleBiometrics = () => {
@@ -90,27 +87,39 @@ function Home() {
 
     // contact handler
 
-    const [contactName, setContactName] = useState("");
-    const [emailId, setEmailId] = useState("");
-    const [contactMessage, setContactMessage] = useState("");
-    const [status, setStatus] = useState("");
+    const [result, setResult] = React.useState("");
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        const formData = { contactName, emailId, contactMessage };
-        try {
-            const response = await axios.post(
-                "http://localhost:5000/send-message", // your backend endpoint
-                formData
-            );
-            setStatus("Message sent successfully!");
-        } catch (error) {
-            setStatus("Error sending message. Please try again later.");
+    const onSubmit = async (event) => {
+        event.preventDefault();
+        setResult("Sending....");
+        const formData = new FormData(event.target);
+
+        formData.append("access_key", "3a3a44b7-7f8b-4de1-8495-5f579285dbb2");
+
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData,
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            setResult("Form Submitted Successfully");
+            Swal.fire({
+                title: "Thank You",
+                text: "Message sent",
+                icon: "success",
+                timer: 1500,
+            });
+            event.target.reset();
+        } else {
+            console.log("Error", data);
+            setResult(data.message);
         }
     };
 
     return (
-        <div className="home">
+        <div className="home blur">
             <section className="hero-section">
                 <div className="hero-col1">
                     <h1>SAFEGUARDING WHAT MATTERS</h1>
@@ -136,7 +145,7 @@ function Home() {
                 </div>
                 <div className="services-row2">
                     <div
-                        className="services-cta fire-safety"
+                        className="services-cta fire-safety "
                         onClick={handleFireExtiunguisher}
                     >
                         <div className="ser-cta-row1">
@@ -353,8 +362,9 @@ function Home() {
                     </div>
                 </div>
             </section>
-            <section className="about-section">
-                <div className="about-sec-col1">
+
+            <section className="about-section ">
+                <div className="about-sec-col1 ">
                     <div className="about-c1-container">
                         <span>
                             <h1>WHO WE ARE -</h1>
@@ -370,7 +380,7 @@ function Home() {
                         </p>
                     </div>
                 </div>
-                <div className="about-sec-col2">
+                <div className="about-sec-col2 ">
                     <div className="graphic-element9 graphic-element">
                         <div className="graphic-element8 graphic-element">
                             <div className="graphic-element7 graphic-element">
@@ -404,8 +414,8 @@ function Home() {
                 </div>
             </section>
 
-            <section className="our-clients-section">
-                <div className="clients-col1">
+            <section className="our-clients-section ">
+                <div className="clients-col1 ">
                     <div className="clients-c1-container">
                         <span>
                             <h1>OUR CLIENTS</h1>
@@ -418,7 +428,7 @@ function Home() {
                         </p>
                     </div>
                 </div>
-                <div className="clients-col2">
+                <div className="clients-col2 ">
                     <div className="clients-c2-row1">
                         <div className="clients-c2-card">
                             <div className="clients-card-row1">
@@ -477,8 +487,8 @@ function Home() {
                 </div>
             </section>
 
-            <section className="career-section">
-                <div className="careers-section-col1">
+            <section className="career-section ">
+                <div className="careers-section-col1 ">
                     <div className="careers-c1-container">
                         <span>
                             <h1>CAREERS</h1>
@@ -499,13 +509,13 @@ function Home() {
                         </button>
                     </div>
                 </div>
-                <div className="careers-section-col2">
+                <div className="careers-section-col2 ">
                     <img src={CareersImg} alt="Careers image" />
                 </div>
             </section>
 
-            <section className="contact-section">
-                <div className="contact-row1">
+            <section className="contact-section ">
+                <div className="contact-row1 ">
                     <h1>LET'S WORK TOGETHER</h1>
                     <p>
                         “Whether you’re curious about our services, need
@@ -513,32 +523,29 @@ function Home() {
                         love to hear from you. Let’s start the conversation!”
                     </p>
                 </div>
-                <form className="contact-row2">
+                <form className="contact-row2 " onSubmit={onSubmit}>
                     <div className="contact-form-row1">
                         <input
                             type="text"
                             placeholder="NAME"
-                            value={contactName}
-                            onChange={(e) => setContactName(e.target.value)}
                             required
+                            name="name"
                         />
                         <input
                             type="email"
                             placeholder="EMAIL"
-                            value={emailId}
-                            onChange={(e) => setEmailId(e.target.value)}
                             required
+                            name="email"
                         />
                     </div>
                     <div className="contact-form-row2">
                         <textarea
                             placeholder="MESSAGE"
-                            value={contactMessage}
-                            onChange={(e) => setContactMessage(e.target.value)}
                             required
+                            name="message"
                         ></textarea>
                     </div>
-                    <div className="contact-form-row3">
+                    <div className="contact-form-row3 ">
                         <div className="contact-graphic-element9 contact-graphic-element">
                             <div className="contact-graphic-element8 contact-graphic-element">
                                 <div className="contact-graphic-element7 contact-graphic-element">
@@ -560,9 +567,6 @@ function Home() {
                                                                     alt="->"
                                                                 />
                                                             </button>
-                                                            {status && (
-                                                                <p>{status}</p>
-                                                            )}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -575,19 +579,35 @@ function Home() {
 
                         <div className="follow-us-links">
                             <h4>FOLLOW US</h4>
-                            <a href="https://www.linkedin.com/company/ivari-security-systems-pvt-ltd/">
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href="https://www.linkedin.com/company/ivari-security-systems-pvt-ltd/"
+                            >
                                 <p>LinkedIn</p>
                                 <img src={Arrow} alt="->" />
                             </a>
-                            <a href="https://www.instagram.com/ivari.in/">
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href="https://www.instagram.com/ivari.in/"
+                            >
                                 <p>Instagram</p>
                                 <img src={Arrow} alt="->" />
                             </a>
-                            <a href="https://x.com/ivari_in">
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href="https://x.com/ivari_in"
+                            >
                                 <p>Twitter</p>
                                 <img src={Arrow} alt="->" />
                             </a>
-                            <a href="https://www.facebook.com/ivari.in/">
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href="https://www.facebook.com/ivari.in/"
+                            >
                                 <p>Facebook</p>
                                 <img src={Arrow} alt="->" />
                             </a>

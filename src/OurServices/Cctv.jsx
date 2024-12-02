@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { observeElements } from "../animations.js";
+
 import { useNavigate } from "react-router-dom";
 import "../styles/FireExtinguisher.css";
 
@@ -17,9 +19,21 @@ import BulletCameraImage from "../assets/ProductImages/ProductCctvBulletType.png
 import DomeCameraImage from "../assets/ProductImages/ProductCctvDomeType.png";
 
 function Cctv() {
+    useEffect(() => {
+        observeElements();
+    }, []);
+
     const navigate = useNavigate();
     const [activeTab, setActiveTab] = useState("Bullet");
     const [showMore, setShowMore] = useState(false);
+
+    // handlers
+    const handleEnquire = () => {
+        window.open(
+            "https://wa.me/919606850350?text=Hello%20I%20have%20an%20enquiry",
+            "_blank"
+        );
+    };
 
     const cameraData = {
         Bullet: {
@@ -60,7 +74,7 @@ function Cctv() {
     };
 
     return (
-        <div className="fire-extinguisher">
+        <div className="fire-extinguisher blur">
             <div className="extinguisher-row1">
                 <div className="extinguisher-r1-col1">
                     <div className="ext-r1-c1-row1">
@@ -151,10 +165,7 @@ function Cctv() {
                     </div>
                     <div className="extinguisher-r1-c2-row2">
                         <h3>For more details</h3>
-                        <button
-                            className="enquire-cta"
-                            onClick={() => navigate("/")}
-                        >
+                        <button className="enquire-cta" onClick={handleEnquire}>
                             Enquire
                             <img src={ArrowRight} alt="->" />
                         </button>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "../assets/Logo/whiteLogo.svg";
 import menuIcon from "../assets/Icons/hamburgerMenu.svg";
@@ -6,7 +6,11 @@ import closeIcon from "../assets/Icons/close.svg";
 import Arrow from "../assets/Icons/top-arrow-right-up.svg";
 import ArrowRight from "../assets/Icons/arrow-right.svg";
 
+// Css
 import "../styles/Navbar.css";
+
+// js files
+import { observeElements } from "../animations.js";
 
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -15,10 +19,16 @@ function Navbar() {
         setMenuOpen(!menuOpen);
     }
 
+    useEffect(() => {
+        observeElements();
+    }, []);
+
     return (
-        <nav className="navbar">
+        <nav className="navbar blur">
             <div className="logo">
-                <img src={Logo} alt="Logo" />
+                <a href="/">
+                    <img src={Logo} alt="Logo" />
+                </a>
             </div>
             <div className="menu-icon" onClick={toggleMenu}>
                 {menuOpen ? (
@@ -27,7 +37,7 @@ function Navbar() {
                     <img src={menuIcon} alt="Open Menu" />
                 )}
             </div>
-            <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
+            <ul className={`hidden nav-links ${menuOpen ? "active" : ""}`}>
                 <div className="nav-row1">
                     <div className="logo">
                         <img src={Logo} alt="Logo" />
@@ -101,31 +111,50 @@ function Navbar() {
                             <h3>Follow Us</h3>
                         </div>
                         <div className="socials-row2">
-                            <a href="https://www.linkedin.com/company/ivari-security-systems-pvt-ltd/">
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href="https://www.linkedin.com/company/ivari-security-systems-pvt-ltd/"
+                            >
                                 <p>LinkedIn</p>
                                 <img src={Arrow} alt="->" />
                             </a>
-                            <a href="https://www.instagram.com/ivari.in/">
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href="https://www.instagram.com/ivari.in/"
+                            >
                                 <p>Instagram</p>
                                 <img src={Arrow} alt="->" />
                             </a>
-                            <a href="https://x.com/ivari_in">
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href="https://x.com/ivari_in"
+                            >
                                 <p>Twitter</p>
                                 <img src={Arrow} alt="->" />
                             </a>
-                            <a href="https://www.facebook.com/ivari.in/">
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href="https://www.facebook.com/ivari.in/"
+                            >
                                 <p>Facebook</p>
                                 <img src={Arrow} alt="->" />
                             </a>
                         </div>
                     </div>
                     <div className="login-links">
-                        <a href="/">
+                        <a target="_blank" href="/">
                             <p>Vendor Login</p>
                             <img src={ArrowRight} alt="->" />
                         </a>
 
-                        <a href="https://www.linkedin.com/company/ivari-security-systems-pvt-ltd/">
+                        <a
+                            rel="noopener noreferrer"
+                            href="https://www.linkedin.com/company/ivari-security-systems-pvt-ltd/"
+                        >
                             <p>Employee Login</p>
                             <img src={ArrowRight} alt="->" />
                         </a>

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+
 import { useNavigate } from "react-router-dom";
 import "../styles/About.css";
 
@@ -11,14 +12,21 @@ import VisionIcon from "../assets/Icons/VisionIcon.svg";
 // components
 import Footer from "../components/Footer.jsx";
 
+import { observeElements } from "../animations.js";
+
 function About() {
+    useEffect(() => {
+        observeElements();
+    }, []);
+
     const navigate = useNavigate();
 
     const handleServicesNav = () => {
         navigate("/services");
     };
+
     return (
-        <div className="about">
+        <div className="about blur">
             <section className="about-hero-section">
                 <div className="hero-heading">
                     <h1>ABOUT</h1>

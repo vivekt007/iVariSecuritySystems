@@ -1,15 +1,5 @@
 @import url("../styles/variables.css");
 
-:root {
-    --color-pure-black: #000000;
-    --color-pure-white: #ffffff;
-    --color-dark-void: #151419;
-    --color-smoky-black: #1b1b1e;
-    --color-dusty-grey: #878787;
-    --color-flash-white: #fbfbfb;
-    --color-blood-red: #cc0118;
-}
-
 .fire-extinguisher {
     background-color: var(--color-pure-black);
     width: 100%;
@@ -411,19 +401,6 @@
         width: 100%;
         padding: 16px;
     }
-
-    /* .extinguisher-r1-col1 {
-        width: 100%;
-        height: fit-content;
-        padding: 16px;
-    }
-
-    .product-extinguisher-r1-col2 {
-        height: 1px;
-        width: 100%;
-        padding: 16px;
-        background-color: #012acc;
-    } */
 
     .ext-r1-c1-r2-tabs {
         overflow-x: scroll;

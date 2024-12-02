@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { observeElements } from "../animations.js";
+
 import { useNavigate } from "react-router-dom";
 import "../styles/FireExtinguisher.css";
 
@@ -15,12 +17,21 @@ import Footer from "../components/Footer.jsx";
 import RiskAssessmentImage from "../assets/ProductImages/ProductFireRiskAssessment.png";
 
 function RiskAssessment() {
+    useEffect(() => {
+        observeElements();
+    }, []);
+
     const navigate = useNavigate();
 
-    const handleEnquire = () => navigate("/");
+    const handleEnquire = () => {
+        window.open(
+            "https://wa.me/919606850350?text=Hello%20I%20have%20an%20enquiry",
+            "_blank"
+        );
+    };
 
     return (
-        <div className="fire-extinguisher">
+        <div className="fire-extinguisher blur">
             <div className="extinguisher-row1">
                 <div className="extinguisher-r1-col1">
                     <div className="ext-r1-c1-row1">

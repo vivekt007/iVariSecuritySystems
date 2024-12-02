@@ -1,15 +1,5 @@
 @import url("../styles/variables.css");
 
-:root {
-    --color-pure-black: #000000;
-    --color-pure-white: #ffffff;
-    --color-dark-void: #151419;
-    --color-smoky-black: #1b1b1e;
-    --color-dusty-grey: #878787;
-    --color-flash-white: #fbfbfb;
-    --color-blood-red: #cc0118;
-}
-
 .about-hero-section {
     background-image: url(../assets/BackgroundImg/AboutHeroBg.png);
     width: 100%;

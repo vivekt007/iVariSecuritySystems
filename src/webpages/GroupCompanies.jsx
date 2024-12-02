@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/GroupComp.css";
 
@@ -9,11 +9,17 @@ import iVariKaiziningIcon from "../assets/Logo/iVariKaiziningIcon.png";
 import Logo3D from "../assets/BackgroundImg/iVariLogo3d.png";
 import Footer from "../components/Footer.jsx";
 
+import { observeElements } from "../animations.js";
+
 function GroupCompanies() {
+    useEffect(() => {
+        observeElements();
+    }, []);
+
     const navigate = useNavigate();
 
     return (
-        <div className="group-companies">
+        <div className="group-companies blur">
             <section className="grp-comp-section">
                 <div className="grp-col1">
                     <img src={Logo3D} alt="Group Companies Background" />
@@ -70,7 +76,8 @@ function GroupCompanies() {
                             </p>
                         </div>
                         <a href="/">
-                            Visit <img src={ArrowRight} alt="->" />
+                            Visit{" "}
+                            <img src={ArrowRight} alt="->" loading="lazy" />
                         </a>
                     </div>
                 </div>

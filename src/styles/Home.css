@@ -3,20 +3,22 @@
 body {
     width: 100%;
     background-color: var(--color-pure-black);
+    overflow-x: hidden;
 }
 
 .hero-section {
     width: 100%;
     min-height: 100vh;
     max-height: fit-content;
-    background-image: url("../assets/BackgroundImg/HeroBg.jpg");
-    background-position: center;
+    background-image: url("../assets/BackgroundImg/HeroBg.png");
+    background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0px 60px;
+    /* box-shadow: inset 0px 8px 60px #000000; */
 }
 
 .hero-col1 {
@@ -84,6 +86,7 @@ body {
     gap: 40px;
     align-items: flex-start;
     justify-content: center;
+    background: linear-gradient(180deg, #060606, #000000);
 }
 
 .services-row1 h1 {
@@ -113,8 +116,8 @@ body {
     justify-content: center;
     gap: 12px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .ser-cta-row1 {
@@ -158,6 +161,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 12px;
+    cursor: pointer;
 }
 
 .ser-cta-btn img {
@@ -798,6 +802,14 @@ body {
 
     .hero-col1 p {
         font-size: 18px;
+    }
+
+    .services-section,
+    .about-section,
+    .our-clients-section,
+    .career-section,
+    .contact-section {
+        padding: 80px 24px;
     }
 
     .services-row2 {

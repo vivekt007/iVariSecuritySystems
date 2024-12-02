@@ -4,16 +4,6 @@ body {
     background-color: var(--color-pure-black);
 }
 
-:root {
-    --color-pure-black: #000000;
-    --color-pure-white: #ffffff;
-    --color-dark-void: #151419;
-    --color-smoky-black: #1b1b1e;
-    --color-dusty-grey: #878787;
-    --color-flash-white: #fbfbfb;
-    --color-blood-red: #cc0118;
-}
-
 .loading-screen {
     display: flex;
     justify-content: center;

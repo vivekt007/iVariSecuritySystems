@@ -1,15 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "../assets/Logo/whiteLogo.svg";
-import menuIcon from "../assets/Icons/hamburgerMenu.svg";
-import closeIcon from "../assets/Icons/close.svg";
 import Arrow from "../assets/Icons/top-arrow-right-up.svg";
-import ArrowRight from "../assets/Icons/arrow-right.svg";
 import Phone from "../assets/Icons/Phone.svg";
 import Mail from "../assets/Icons/Mail.svg";
 import Location from "../assets/Icons/Location.svg";
 
 import "../styles/Footer.css";
+
+// js files
 
 function Footer() {
     const currentYear = new Date().getFullYear();
@@ -30,16 +29,32 @@ function Footer() {
                     <div className="footer-r1-c1-col1">
                         <h3>Connect</h3>
                         <ul>
-                            <a href="https://www.linkedin.com/company/ivari-security-systems-pvt-ltd/">
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href="https://www.linkedin.com/company/ivari-security-systems-pvt-ltd/"
+                            >
                                 <p>LinkedIn</p>
                             </a>
-                            <a href="https://www.instagram.com/ivari.in/">
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href="https://www.instagram.com/ivari.in/"
+                            >
                                 <p>Instagram</p>
                             </a>
-                            <a href="https://x.com/ivari_in">
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href="https://x.com/ivari_in"
+                            >
                                 <p>Twitter</p>
                             </a>
-                            <a href="https://www.facebook.com/ivari.in/">
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href="https://www.facebook.com/ivari.in/"
+                            >
                                 <p>Facebook</p>
                             </a>
                         </ul>
@@ -54,7 +69,11 @@ function Footer() {
                                 <NavLink to="/services">Services</NavLink>
                             </li>
                             <li>
-                                <a href="https://www.linkedin.com/company/ivari-security-systems-pvt-ltd/">
+                                <a
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href="https://www.linkedin.com/company/ivari-security-systems-pvt-ltd/"
+                                >
                                     Careers
                                 </a>
                             </li>
@@ -66,19 +85,43 @@ function Footer() {
                         </h3>
                         <ul>
                             <li>
-                                <a href="/">KA Registered Office</a>
+                                <a
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href="https://maps.app.goo.gl/CSn5SDHNkJkc5vGE8"
+                                >
+                                    KA Registered Office
+                                </a>
                                 <img src={Arrow} alt="->" />
                             </li>
                             <li>
-                                <a href="/">KA Corporate Office</a>
+                                <a
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href="https://maps.app.goo.gl/Y1gjs672HzADhh877"
+                                >
+                                    KA Corporate Office
+                                </a>
                                 <img src={Arrow} alt="->" />
                             </li>
                             <li>
-                                <a href="/">KA Regional Office</a>
+                                <a
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href="https://maps.app.goo.gl/YusehuCs8ndq2mWZ6"
+                                >
+                                    KA Regional Office
+                                </a>
                                 <img src={Arrow} alt="->" />
                             </li>
                             <li>
-                                <a href="/">TN Head Office</a>
+                                <a
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href="https://maps.app.goo.gl/YX1r3gnddDpBafig8"
+                                >
+                                    TN Head Office
+                                </a>
                                 <img src={Arrow} alt="->" />
                             </li>
                         </ul>
@@ -89,17 +132,22 @@ function Footer() {
                 <div className="footer-r2-col1">
                     <span>
                         <img src={Phone} alt="Phone No" />
-                        <a href="/">+91 9606850350</a>
+                        <a href="tel:+919606850350">+91 9606850350</a>
                     </span>
                     <span>
                         <img src={Mail} alt="Mail" />
-                        <a href="/">iamsafe@ivari.in</a>
+                        <a
+                            target="_blank"
+                            href="mailto:vivektigadi59@gmail.com?subject=Enquiry"
+                        >
+                            iamsafe@ivari.in
+                        </a>
                     </span>
                 </div>
                 <div className="footer-r2-col2">
                     <p>
-                        Copyright © {currentYear} iVari Security Systems  Pvt
-                        Ltd - All Rights Reserved.
+                        Copyright © {currentYear} iVari Security Systems Pvt Ltd
+                        - All Rights Reserved.
                     </p>
                 </div>
             </div>

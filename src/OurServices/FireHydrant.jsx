@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { observeElements } from "../animations.js";
+
 import { useNavigate } from "react-router-dom";
 import "../styles/FireExtinguisher.css";
 
@@ -16,9 +18,23 @@ import UpriserImage from "../assets/ProductImages/ProductUpriser.png";
 import DownComerImage from "../assets/ProductImages/ProductDownComer.png";
 
 function FireHydrant() {
+    useEffect(() => {
+        observeElements();
+    }, []);
+
     const navigate = useNavigate();
     const [activeTab, setActiveTab] = useState("UpRiser"); // Default tab
     const [showMore, setShowMore] = useState(false);
+
+    // Handlers
+    const handleTabClick = (tab) => setActiveTab(tab);
+    const toggleDetails = () => setShowMore(!showMore);
+    const handleEnquire = () => {
+        window.open(
+            "https://wa.me/919606850350?text=Hello%20I%20have%20an%20enquiry",
+            "_blank"
+        );
+    };
 
     // Hydrant data
     const hydrantData = {
@@ -36,13 +52,8 @@ function FireHydrant() {
         },
     };
 
-    // Handlers
-    const handleTabClick = (tab) => setActiveTab(tab);
-    const toggleDetails = () => setShowMore(!showMore);
-    const handleEnquire = () => navigate("/");
-
     return (
-        <div className="fire-extinguisher">
+        <div className="fire-extinguisher blur">
             <div className="extinguisher-row1">
                 <div className="extinguisher-r1-col1">
                     <div className="ext-r1-c1-row1">

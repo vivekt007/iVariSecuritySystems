@@ -15,7 +15,35 @@
     text-decoration: none;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    color: var(--color-flash-white);
+    font-display: swap;
+}
+
+body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.hidden {
+    opacity: 0;
+    transition: 0.5s;
+    filter: blur(5px);
+    transform: translateX(100%);
+}
+
+.blur {
+    opacity: 0;
+    transition: all 2s;
+    filter: blur(5px);
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0%);
+    top: 0;
+}
+
+section {
+    overflow: hidden;
 }
 
 @font-face {
@@ -84,6 +112,7 @@ h3,
 h4,
 h5,
 h6,
+a,
 p {
-    color: var(--color-dark-void);
+    color: var(--color-flash-white);
 }

@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    useLocation,
+} from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import "./styles/App.css";
 import Navbar from "./components/Navbar.jsx";
@@ -17,11 +22,20 @@ import SafetyTraning from "./OurServices/SafetyTraning.jsx";
 import RiskAssessment from "./OurServices/RiskAssessment.jsx";
 import OtherProducts from "./OurServices/OtherProduct.jsx";
 
+function ScrollToTop() {
+    const location = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location.pathname]);
+
+    return null;
+}
+
 function App() {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        // Simulate a loading delay
         const timer = setTimeout(() => setIsLoading(false), 3000);
         return () => clearTimeout(timer);
     }, []);
@@ -35,7 +49,13 @@ function App() {
     }
 
     return (
-        <Router>
+        <Router
+            future={{
+                v7_startTransition: true,
+                v7_relativeSplatPath: true,
+            }}
+        >
+            <ScrollToTop />
             <Navbar />
             <Routes>
                 <Route path="/" element={<Home />} />
