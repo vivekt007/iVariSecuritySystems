@@ -146,18 +146,18 @@ function Navbar() {
                         </div>
                     </div>
                     <div className="login-links">
-                        <a target="_blank" href="/">
-                            <p>Vendor Login</p>
+                        <a
+                            target="_blank"
+                            href="http://tracking.ivari.in/Vendor.aspx"
+                        >
+                            <p>Vendor Registation</p>
                             <img src={ArrowRight} alt="->" />
                         </a>
 
-                        <a
-                            rel="noopener noreferrer"
-                            href="https://www.linkedin.com/company/ivari-security-systems-pvt-ltd/"
-                        >
+                        {/* <a target="_blank" rel="noopener noreferrer" href="/">
                             <p>Employee Login</p>
                             <img src={ArrowRight} alt="->" />
-                        </a>
+                        </a> */}
                     </div>
                 </ol>
             </ul>

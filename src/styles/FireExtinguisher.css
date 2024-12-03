@@ -291,7 +291,7 @@
 
 .extinguisher-r1-col2 {
     width: 60%;
-    min-height: 80dvh;
+    height: 80dvh;
     max-height: fit-content;
     background-color: #15141980;
     border-radius: 12px;
@@ -410,10 +410,16 @@
         width: 100%;
         height: fit-content;
     }
+
     .extinguisher-r1-c2-row2 {
         width: 100%;
         height: fit-content;
         padding: 8px 0;
+    }
+
+    .extinguisher-r1-col2 {
+        width: 100%;
+        height: fit-content;
     }
 
     .extinguisher-r1-c2-row1 img {
