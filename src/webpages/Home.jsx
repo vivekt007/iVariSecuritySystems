@@ -31,6 +31,7 @@ import CareersImg from "../assets/BackgroundImg/CareersImage.png";
 import Footer from "../components/Footer.jsx";
 
 function Home() {
+    // Animations effect
     useEffect(() => {
         observeElements();
     }, []);
