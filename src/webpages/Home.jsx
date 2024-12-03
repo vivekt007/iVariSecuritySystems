@@ -6,11 +6,6 @@ import Swal from "sweetalert2";
 // js files
 import { observeElements } from "../animations.js";
 
-// logos
-import Zudio from "../assets/Logo/Zudio.png";
-import NammaYatri from "../assets/Logo/NammaYatri.png";
-import Aurigene from "../assets/Logo/Aurigene.png";
-
 // Icons
 import Arrow from "../assets/Icons/top-arrow-right-up.svg";
 import ArrowRight from "../assets/Icons/arrow-right.svg";
@@ -22,6 +17,11 @@ import SuppressionIcon from "../assets/Icons/Suppression.svg";
 import RiskAssesmentIcon from "../assets/Icons/FireRiskAssessment.svg";
 import SafetyTraningsIcon from "../assets/Icons/FireSafetyTraining.svg";
 import OtherProductsIcon from "../assets/Icons/OtherProducts.svg";
+
+// logos
+import Zudio from "../assets/Logo/Zudio.png";
+import NammaYatri from "../assets/Logo/NammaYatri.png";
+import Aurigene from "../assets/Logo/Aurigene.png";
 
 // background
 import Logo3D from "../assets/BackgroundImg/iVariLogo3d.png";

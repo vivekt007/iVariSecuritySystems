@@ -10,5 +10,6 @@ export default defineConfig({
         client: {
             logging: "none",
         },
+        assetsInclude: ["**/*.ttf", "**/*.png"],
     },
 });
