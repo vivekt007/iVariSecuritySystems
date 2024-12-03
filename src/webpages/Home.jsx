@@ -141,7 +141,7 @@ function Home() {
 
             <section className="services-section">
                 <div className="services-row1">
-                    <h1>Services</h1>
+                    <h1>Our Services</h1>
                 </div>
                 <div className="services-row2">
                     <div
