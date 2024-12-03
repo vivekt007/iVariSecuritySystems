@@ -19,9 +19,9 @@ import SafetyTraningsIcon from "../assets/Icons/FireSafetyTraining.svg";
 import OtherProductsIcon from "../assets/Icons/OtherProducts.svg";
 
 // logos
-import Zudio from "../assets/Logo/Zudio.png";
-import NammaYatri from "../assets/Logo/NammaYatri.png";
-import Aurigene from "../assets/Logo/Aurigene.png";
+import ZudioLogo from "../assets/Logo/Zudio.png";
+import NammaYatriLogo from "../assets/Logo/NammaYatri.png";
+import AurigeneLogo from "../assets/Logo/Aurigene.png";
 
 // background
 import Logo3D from "../assets/BackgroundImg/iVariLogo3d.png";
@@ -432,7 +432,7 @@ function Home() {
                     <div className="clients-c2-row1">
                         <div className="clients-c2-card">
                             <div className="clients-card-row1">
-                                <img src={Zudio} alt="Client1" />
+                                <img src={ZudioLogo} alt="Client1" />
                                 <h2>Zudio</h2>
                             </div>
                             <div className="clients-card-row2">
@@ -445,7 +445,7 @@ function Home() {
                         </div>
                         <div className="clients-c2-card">
                             <div className="clients-card-row1">
-                                <img src={NammaYatri} alt="Client1" />
+                                <img src={NammaYatriLogo} alt="Client1" />
                                 <h2>Namma Yatri</h2>
                             </div>
                             <div className="clients-card-row2">
@@ -460,7 +460,7 @@ function Home() {
                     <div className="clients-c2-row2">
                         <div className="clients-c2-card">
                             <div className="clients-card-row1">
-                                <img src={Aurigene} alt="Client1" />
+                                <img src={AurigeneLogo} alt="Client1" />
                                 <h2>Aurigene</h2>
                             </div>
                             <div className="clients-card-row2">
