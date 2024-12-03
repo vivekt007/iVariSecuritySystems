@@ -18,7 +18,7 @@ import FireSafetyIcon from "../assets/Icons/FireSafetyService.svg";
 import SurvellianceIcon from "../assets/Icons/Surveillance.svg";
 import SignageIcon from "../assets/Icons/Signages.svg";
 import BiometricsIcon from "../assets/Icons/Biometrics.svg";
-import FireSafetyAuditIcon from "../assets/Icons/FireSafetyAudit.svg";
+import SuppressionIcon from "../assets/Icons/Suppression.svg";
 import RiskAssesmentIcon from "../assets/Icons/FireRiskAssessment.svg";
 import SafetyTraningsIcon from "../assets/Icons/FireSafetyTraining.svg";
 import OtherProductsIcon from "../assets/Icons/OtherProducts.svg";
@@ -254,7 +254,7 @@ function Home() {
                         <div className="ser-cta-row1">
                             <div className="ser-cta-icon">
                                 <img
-                                    src={FireSafetyAuditIcon}
+                                    src={SuppressionIcon}
                                     alt="Suppression system"
                                 />
                             </div>
@@ -437,12 +437,9 @@ function Home() {
                             </div>
                             <div className="clients-card-row2">
                                 <p>
-                                    Lorem Ipsum is simply dummy text of the
-                                    printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy
-                                    text ever since the 1500s, when an unknown
-                                    printer took a galley of type and scrambled
-                                    it to make a type specimen book.
+                                    Delivered essential fire safety services,
+                                    including new fire extinguishers and
+                                    refills.
                                 </p>
                             </div>
                         </div>
@@ -453,12 +450,9 @@ function Home() {
                             </div>
                             <div className="clients-card-row2">
                                 <p>
-                                    Lorem Ipsum is simply dummy text of the
-                                    printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy
-                                    text ever since the 1500s, when an unknown
-                                    printer took a galley of type and scrambled
-                                    it to make a type specimen book.
+                                    Enhanced safety through new fire
+                                    extinguishers, refills, and comprehensive
+                                    training in fire safety, CPR, and CERT.
                                 </p>
                             </div>
                         </div>
@@ -471,12 +465,10 @@ function Home() {
                             </div>
                             <div className="clients-card-row2">
                                 <p>
-                                    Lorem Ipsum is simply dummy text of the
-                                    printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy
-                                    text ever since the 1500s, when an unknown
-                                    printer took a galley of type and scrambled
-                                    it to make a type specimen book.
+                                    Provided end-to-end solutions with AMC
+                                    services, fire extinguisher refills,
+                                    electrical suppression systems, server room
+                                    protection, and smoke detection systems.
                                 </p>
                             </div>
                         </div>
